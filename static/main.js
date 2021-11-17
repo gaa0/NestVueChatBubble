@@ -4,7 +4,7 @@ const app = new Vue({
     title: '시그널 룸',
     name: '',
     text: '',
-    messages: { A: '', B: '' },
+    messages: { A: '', B: '', C: '' },
     socket: null,
   },
   methods: {
@@ -24,6 +24,8 @@ const app = new Vue({
         app.messages.A = message.text;
       } else if (message.name === 'B') {
         app.messages.B = message.text;
+      } else if (message.name === 'C') {
+        app.messages.C = message.text;
       }
     },
     validateInput() {
